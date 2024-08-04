@@ -154,7 +154,7 @@ const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 const odds = [];
 
 nums.forEach((num) => {
-    num % 2 === 1 && odds.push(num)
+   num % 2 === 1 && odds.push(num)
 });
 
 console.log('Exercise 11 result:', odds);
@@ -183,15 +183,15 @@ const buzz = [];
 const fizzbuzz = [];
 
 nums.forEach((num) => {
-    num % 3 === 0 && fizz.push(num)
+   num % 3 === 0 && fizz.push(num)
 });
 
 nums.forEach((num) => {
-    num % 5 === 0 && buzz.push(num)
+   num % 5 === 0 && buzz.push(num)
 });
 
 nums.forEach((num) => {
-    num % 3 === 0 && num % 5 === 0 && fizzbuzz.push(num)
+   num % 3 === 0 && num % 5 === 0 && fizzbuzz.push(num)
 });
 
 console.log('Exercise 12 Results:');
@@ -218,7 +218,7 @@ const numArrays = [
 	[7, 81, 90]
 ];
 
-const numList = numArrays.slice(-1);
+const numList = numArrays[numArrays.length - 1];
 
 console.log('Exercise 13 result:', numList);
 
@@ -250,12 +250,12 @@ Hint: Be sure to declare and initialize the total variable before the iterations
 Complete Exercise 15 in the space below:
 */
 
-let total = 0;
+let total = 0
 
-for(let i = 0; i < numArrays.length; i++) {
-    for(let j = 0; j < numArrays[i].length; j++) {
-      total += numArrays[i][j];
-    }
-}
+numArrays.forEach((arr) => {
+   arr.forEach((num) => {
+      total += num
+   });
+});
 
 console.log('Exercise 15 result:\n', total);
